@@ -1,10 +1,10 @@
-async function windowActions() {
+/*async function windowActions() {
     console.log('Window loaded');
     const form = document.querySelector('.field');
     const search = document.querySelector('#search');
     const suggestions = document.querySelector('.suggestions');
 
-    const request = await fetch('/api');
+    const request = await fetch(endpoint);
     const data = await request.json();
     
     form.addEventListener('submit', async (event) => {
@@ -48,3 +48,38 @@ window.onload = windowActions;
 //        const data = await request.json();
     //    console.log(data);
         //console.table(data);
+
+*/
+const endpoint = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
+
+const zipcodes = [];
+
+fetch(endpoint)
+    .then(blob => blob.json())
+    .then(data => zipcodes.push(...data))
+
+function findMatches(wordToMatch, zipcodes) {
+    return zipcodes.filter(restaurant => {
+        const regex = new RegExp(wordToMatch, 'gi');
+        return restaurant.zipcode.match(regex)
+    });
+
+}
+
+function displayMatches() {
+    //console.log(this.value);
+    const matchArray = findMatches(this.value, zipcodes);
+    //console.log(matchArray)
+    const html = matchArray.map(restaurant => {
+        
+        return ``;
+    }).join('');
+    suggestions.innerHTML = html;
+}
+
+//const form = document.querySelector('.field');
+const searchInput = document.querySelector('.search');
+const suggestions = document.querySelector('.suggestions');
+
+searchInput.addEventListener('change', displayMatches);
+searchInput.addEventListener('keyup', displayMatches);
