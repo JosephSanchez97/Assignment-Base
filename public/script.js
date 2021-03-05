@@ -71,15 +71,29 @@ function displayMatches() {
     const matchArray = findMatches(this.value, zipcodes);
     //console.log(matchArray)
     const html = matchArray.map(restaurant => {
-        
-        return ``;
+        const restaurantName = restaurant.name;
+        const addressLine1 = restaurant.address_line_1;
+        const addressLine2 = restaurant.address_line_2;
+        const [category] = restaurant;
+
+        return `
+        <div class = "box is-medium"> 
+        <li> 
+            <div class = "name"> ${restaurantName} </div>
+            <div class = "address"> ${addressLine1} </div>
+            <div class = "address"> ${addressLine2} </div>
+            <div class = "category"> ${category} </div>
+
+        </li>
+        </div>
+        `;
     }).join('');
     suggestions.innerHTML = html;
 }
 
 //const form = document.querySelector('.field');
-const searchInput = document.querySelector('.search');
-const suggestions = document.querySelector('.suggestions');
+//const searchInput = document.querySelector('.search');
+//const suggestions = document.querySelector('.suggestions');
 
-searchInput.addEventListener('change', displayMatches);
+searchInput.addEventListener('input', displayMatches);
 searchInput.addEventListener('keyup', displayMatches);
