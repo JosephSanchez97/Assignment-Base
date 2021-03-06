@@ -107,11 +107,10 @@ async function windowActions() {
   const filteredList = document.querySelector("#filteredList");
 
   let filteredPlaces = [];
-  let searchType = "name";
 
-  function findMatches(wordToMatch, places) {
+  function findMatches(search, places) {
     return places.filter((place) => {
-      const regex = new RegExp(wordToMatch, "gi");
+      const regex = new RegExp(search, "gi");
       return place.name.match(regex);
     });
   }
