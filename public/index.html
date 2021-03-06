@@ -1,27 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 1</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma-rtl.min.css">
-    <link rel="stylesheet" type="text/css" ref="style.css">
-</head>
-<body>
-    <div class="container has-text-centered">
-        <header class="title is-3">Joseph Sanchez, Abhishek Padmanabhan, Vig Vishwanathan</header>
-        <h1 class="title is-1">Assignment 1</h1>
-            <form class="field" action="/api" method="post">
-                <label class="label" for="search">Search</label>
-                <input class="input" type="text" name="search" id="search" placeholder="Zip Code"/>
-                <input class="button" type="submit" value="Submit"/>
-            </form>
-        <div class="content">
-            <ul class = "Results"> </ul>
-                <il></il>
-        </div>
-    </div>
-</body>
-<script src="script.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title> Joseph Sanchez, Abhishek Padmanabhan, Vig Vishwanathan</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="hero is-danger is-small has-text-centered">
+      <div class="hero-body">
+        <p class="title">
+          Assignment 1
+        </p>
+        <p class="subtitle">
+         Joseph Sanchez, Abhishek Padmanabhan, Vig Vishwanathan
+        </p>
+      </div>
+    </section>
+
+      <section class="section is-medium">
+        <nav class="level">
+          <div class="level-item">
+            <div class="field has-addons">
+              <p class="control">
+                <input
+                  class="input is-medium is-rounded"
+                  type="text"
+                  id="search"
+                  name="search"
+                  placeholder="Search"
+                />
+              </p>
+              <p class="control">
+                <button type="submit" class="button is-success is-medium">
+                  Submit Form
+                </button>
+              </p>
+            </div>
+          </div>
+        </nav>
+      </section>
+    </form>
+    <ul id='filteredList'>
+    </ul>
+  </body>
+  <script src="script.js"></script>
 </html>

@@ -1,3 +1,6 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css";
+
+
 .container {
     width: 80%;
     max-width: 960px;
@@ -7,31 +10,41 @@
   .container * {
     box-sizing: border-box;
   }
-
-body {
+  .card-content {
+    background-color: transparent;
+    padding: 1.5rem;
+  }
+  body {
     background-color: rgb(127, 4, 151);
-    padding: 50px 0;
+    margin: auto;
+    max-width: 960px;
+    height: 100%;
   }
-  .content {
+  
+  .hero {
+    font-family: "Comfortaa", cursive;
+    color: #ffe600;
+    padding-bottom: 100px;
   }
-
-  .box is-medium {
-
+  .title {
+    font-weight: 800;
+    text-decoration: underline;
   }
-
-  .name {
-    text-align: center;
-    font: normal 30px/1.5 "Times New Roman", Times, serif;
-    color: rgb(12, 8, 8)
+  .subtitle {
+    font-weight: 400;
+    font-style: italic;
   }
-
-  .address {
-
+  
+  .input .button {
+    font-family: "Montserrat", sans-serif;
   }
-
-  .category {
-
+  
+  ul {
+    list-style: disc outside;
+    margin-left: 2em;
+    margin-top: 1em;
   }
+  
 
 
 
