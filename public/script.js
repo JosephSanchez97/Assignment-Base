@@ -103,17 +103,20 @@ searchInput.addEventListener('keyup', displayMatches);
 window.onload = windowActions; */
 
 async function windowActions() {
-  const search = document.querySelector("#search");
+  const search = document.querySelector("#zip");
   const filteredList = document.querySelector("#filteredList");
 
   let filteredPlaces = [];
 
+
   function findMatches(search, places) {
-    return places.filter((place) => {
-      const regex = new RegExp(search, "gi");
-      return place.name.match(regex);
+    return places.filter(place => {
+        const regex = new RegExp(search, "gi");
+        return place.zip.match(regex)
     });
-  }
+}
+
+
   function removeChildren(parent) {
     while (parent.firstChild) {
       parent.removeChild(parent.firstChild);
