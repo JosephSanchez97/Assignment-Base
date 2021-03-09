@@ -1,47 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Joseph Sanchez, Abhishek Padmanabhan, Vig Vishwanathan</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <section class="hero is-danger is-small has-text-centered">
-      <div class="hero-body">
-        <p class="title">
-          Assignment 1
-        </p>
-        <p class="subtitle">
-         Joseph Sanchez, Abhishek Padmanabhan, Vig Vishwanathan
-        </p>
-      </div>
-    </section>
-
-      <section class="section is-medium">
-        <nav class="level">
-          <div class="level-item">
-            <div class="field has-addons">
-              <p class="control">
-                <input
-                  class="input is-medium is-rounded"
-                  type="text"
-                  id="zip"
-                  name="zip"
-                  placeholder="Zip Code"
-                />
-              </p>
-            </div>
-          </div>
-        </nav>
-      </section>
-    </form>
-    <ul id='filteredList'>
-    </ul>
-  </body>
-  <script src="script.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Joseph Sanchez, Abhishek Padmanabhan, Vig Vishwanathan</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="title has-text-centered">Joseph Sanchez, Abhishek Padmanabhan, Vig Vishwanathan</h1>
+            <form autocomplete="off">
+              <div class="field">
+                <label class="label">Search by Zipcode</label>
+                    <input class="input" type="text" id="searchByZip" placeholder="Zipcode">
+                    <!-- <input class="button" id=subButton type="submit" value="Submit"/>-->
+                  </div>
+            </form>
+      <ul id='filteredList'>
+      </ul>
+</div>
+<script src="script.js"></script>
+</body>
 </html>
